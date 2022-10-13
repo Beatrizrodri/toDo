@@ -1,0 +1,17 @@
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--background);
+}
+
+#content {
+  width: 50%;
+  height: auto;
+  padding: 2rem;
+  background-color: var(--form-background);
+  border-radius: 0.8rem;
+}

@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  --text-base: #9f9f9f;
+  --text-title: #c26d20;
+  --background: #191816;
+  --form-background: #2d2b28;
+  --primary-color: #34711f;
+}
+
+html {
+  font-weight: 400;
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
