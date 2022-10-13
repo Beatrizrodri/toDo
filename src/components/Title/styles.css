@@ -1,0 +1,17 @@
+#title-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--text-base);
+  font-family: 'Roboto';
+  padding-left: 2rem;
+}
+
+#title-content h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+#title-content span {
+  font-size: 1.6rem;
+}
