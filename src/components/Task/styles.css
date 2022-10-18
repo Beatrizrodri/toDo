@@ -5,18 +5,32 @@
 }
 
 .task {
-  width: 92%;
+  width: calc(100% - 4rem);
   height: 4rem;
   margin: 1rem;
+  padding: 0 2rem;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   border-radius: 0.4rem;
   background-color: var(--primary-color);
 
-  color: var(--background);
+  color: var(--text-base);
   font-size: 1.4rem;
   font-weight: 600;
+}
+
+.task button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  color: var(--text-base);
+}
+
+.icon {
+  width: 2.2rem;
+  height: auto;
+  cursor: pointer;
 }

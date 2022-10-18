@@ -1,4 +1,5 @@
 import './styles.css';
+import { TbTrash } from 'react-icons/tb';
 
 export default function Task({ task, onDelete }) {
   function handleDeleteTask() {
@@ -9,7 +10,9 @@ export default function Task({ task, onDelete }) {
     <div className="task-container">
       <div className="task">
         <span className="task-value">{task.task}</span>
-        <button onClick={handleDeleteTask}>delete</button>
+        <button onClick={handleDeleteTask}>
+          <TbTrash className="icon" />
+        </button>
       </div>
     </div>
   );

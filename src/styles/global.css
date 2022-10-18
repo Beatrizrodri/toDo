@@ -11,10 +11,10 @@
   width: 100vw;
   height: 100vh;
   --text-base: #9f9f9f;
-  --text-title: #c26d20;
-  --background: #191816;
-  --form-background: #2d2b28;
-  --primary-color: #34711f;
+  --text-title: #091e02;
+  --background: #1d2f31;
+  --form-background: #4b5c67;
+  --primary-color: #3a472b;
 }
 
 html {
