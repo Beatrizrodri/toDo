@@ -8,10 +8,21 @@ export default function AddTask({ addTask }) {
     const newTask = {
       id: new Date().getTime(),
       task,
+      done: false,
     };
 
-    addTask(oldTasks => [...oldTasks, newTask]);
+    if (task) {
+      addTask(oldTasks => [...oldTasks, newTask]);
+
+      setTask('');
+    }
   }
+
+  const handleKeyDown = event => {
+    if (event.key === 'Enter') {
+      handleAddTask();
+    }
+  };
 
   return (
     <div id="content-add-button">
@@ -20,6 +31,7 @@ export default function AddTask({ addTask }) {
         placeholder="Digite aqui sua tarefa"
         onChange={event => setTask(event.target.value)}
         value={task}
+        onKeyDown={handleKeyDown}
       />
       <button type="submit" onClick={handleAddTask}>
         Adicionar
