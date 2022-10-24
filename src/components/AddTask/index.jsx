@@ -1,26 +1,26 @@
 import { useState } from 'react';
 import './styles.css';
 
-export default function AddTask({ addTask }) {
+export default function AddTask({ handleAddTask }) {
   const [task, setTask] = useState('');
 
-  function handleAddTask() {
+  const createNewTask = () => {
     const newTask = {
       id: new Date().getTime(),
       task,
       done: false,
     };
 
-    if (task) {
-      addTask(oldTasks => [...oldTasks, newTask]);
+    setTask('');
 
-      setTask('');
+    if (newTask.task) {
+      handleAddTask(newTask);
     }
-  }
+  };
 
   const handleKeyDown = event => {
     if (event.key === 'Enter') {
-      handleAddTask();
+      createNewTask();
     }
   };
 
@@ -33,7 +33,7 @@ export default function AddTask({ addTask }) {
         value={task}
         onKeyDown={handleKeyDown}
       />
-      <button type="submit" onClick={handleAddTask}>
+      <button type="submit" onClick={() => createNewTask()}>
         Adicionar
       </button>
     </div>

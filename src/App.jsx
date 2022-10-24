@@ -1,10 +1,10 @@
 import './styles/global.css';
-import Container from './components/Container';
+import Home from './assets/pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <Container />
+      <Home />
     </div>
   );
 }

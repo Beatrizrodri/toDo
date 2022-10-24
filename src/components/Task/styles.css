@@ -12,7 +12,7 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  position: relative;
 
   border-radius: 0.4rem;
   background-color: var(--primary-color);
@@ -22,11 +22,67 @@
   font-weight: 600;
 }
 
+.task-value {
+  margin-left: 1rem;
+}
+
+.text {
+  text-decoration: line-through 0.3rem;
+}
+
+input[type='checkbox'] {
+  position: relative;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+input[type='checkbox']:before {
+  content: '';
+  border-radius: 2rem;
+  display: block;
+  position: absolute;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  top: -0.4rem;
+  left: -0.2rem;
+  background-color: var(--text-base);
+}
+input[type='checkbox']:checked:before {
+  content: '';
+  border-radius: 2rem;
+  display: block;
+  position: absolute;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  top: -0.4rem;
+  left: -0.2rem;
+  background-color: var(--primary-color);
+}
+
+input[type='checkbox']:checked:after {
+  content: '';
+  display: block;
+  width: 0.5rem;
+  height: 1rem;
+  border: solid var(--text-base);
+  border-width: 0 0.2rem 0.2rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: -0.1rem;
+  left: 0;
+}
+
 .task button {
   display: flex;
   background-color: transparent;
   border: none;
   color: var(--text-base);
+  position: absolute;
+  right: 2rem;
 }
 
 .icon {

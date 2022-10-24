@@ -1,16 +1,21 @@
 import './styles.css';
 import { TbTrash } from 'react-icons/tb';
 
-export default function Task({ task, onDelete }) {
-  function handleDeleteTask() {
-    onDelete(tasks => tasks.filter(t => t.id !== task.id));
-  }
-
+export default function Task({
+  task,
+  handleToogleTaskIsDone,
+  handleDeleteTask,
+}) {
   return (
     <div className="task-container">
       <div className="task">
-        <span className="task-value">{task.task}</span>
-        <button onClick={handleDeleteTask}>
+        <input
+          type="checkbox"
+          id="task-checkbox"
+          onClick={() => handleToogleTaskIsDone(task.id)}
+        />
+        <span className={task.done ? 'text' : 'task-value'}>{task.task}</span>
+        <button onClick={() => handleDeleteTask(task.id)}>
           <TbTrash className="icon" />
         </button>
       </div>
