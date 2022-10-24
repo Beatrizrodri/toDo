@@ -15,3 +15,29 @@
   background-color: var(--form-background);
   border-radius: 0.8rem;
 }
+
+@media screen and (max-width: 1024px) {
+  #content {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #content {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #content {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #content {
+    width: 92%;
+    padding: 0.4rem;
+  }
+}

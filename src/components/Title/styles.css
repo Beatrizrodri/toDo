@@ -16,3 +16,29 @@
   font-size: 1.6rem;
   font-weight: 500;
 }
+
+@media screen and (max-width: 425px) {
+  #title-content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  #title-content h1 {
+    font-size: 3.5rem;
+  }
+  #title-content span {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #title-content {
+    text-align: center;
+  }
+  #title-content h1 {
+    font-size: 3.2rem;
+  }
+  #title-content span {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+}

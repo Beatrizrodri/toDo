@@ -34,3 +34,17 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+@media screen and (max-width: 425px) {
+  #content-add-button {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  #content-add-button input {
+    width: 100%;
+  }
+  #content-add-button button {
+    width: 100%;
+  }
+}

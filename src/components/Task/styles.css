@@ -6,7 +6,7 @@
 
 .task {
   width: calc(100% - 4rem);
-  height: 4rem;
+  height: auto;
   margin: 1rem;
   padding: 0 2rem;
 
@@ -23,11 +23,12 @@
 }
 
 .task-value {
-  margin-left: 1rem;
+  padding: 1rem 6% 1rem 4%;
 }
 
 .text {
   text-decoration: line-through 0.3rem;
+  padding: 1rem 6% 1rem 4%;
 }
 
 input[type='checkbox'] {
@@ -89,4 +90,20 @@ input[type='checkbox']:checked:after {
   width: 2.2rem;
   height: auto;
   cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .task {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .task-value,
+  .text {
+    padding: 1rem 10% 1rem 6%;
+  }
+
+  .task button {
+    right: 1rem;
+  }
 }
